@@ -145,10 +145,11 @@ a{
 
 
 
-.profile:hover {
+.profile:hover {/*
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
-  border-radius:20px;
+  border-radius:20px;*/
+}
     </style>
 
 </head>
@@ -193,7 +194,7 @@ a{
     <div class="container">
         <div class="row" id="about">
             <div class="col-sm-3">
-                <img src="assets/me.jpg" class="profile"/>
+                <img src="assets/me.jpg" class="profile" id = "mypic"/>
             </div>
             <div class="col-sm-9" style="font-size:17px;"><br><br>
                 <p style="text-align:justify;">I am a PhD. Candidate, working under the supervision of <a href="http://www.csre.iitb.ac.in/~sdurbha/" target="_blank">Prof. Surya Durbha</a> in the <a href="http://www.geosysiot.in/" target="_blank">GeoComputational Systems Lab</a> at <a target="_blank" href="http://www.csre.iitb.ac.in/">Centre of Studies in Resources Engineering</a>, <a target="_blank" href="http://www.iitb.ac.in/">Indian Institute of Technology Bombay</a>. My research interests include <i>Deep Learning for Computer Vision, Satellite Image Processing, Knowledge Representation, Geospatial Semantics, Remote Sensing and GIS, Natural Language Processing and Internet Of Things</i>. I primarily work on improving the machine-level perception and "understanding" of remote sensing scenes, focusing on disaster scenarios.</p>
@@ -1052,10 +1053,13 @@ Journal of the Indian Society of Remote Sensing, Springer</a></li>
         function init() {
           document.getElementById("aboutInit").click();
           console.log("Clicked");
+          $("img").on("contextmenu",function(e){return false;});
+          $('img').on('dragstart', function () {
+              console.log("drag");
+               return false;
+           });
         }
-
-
-    </script>
+  </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55373896-1"></script>
 <script>
