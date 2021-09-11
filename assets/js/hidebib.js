@@ -37,6 +37,7 @@ function toggleblock(blockId)
 
 function hideblock(blockId)
 {
+   console.log(blockId);
    var block = document.getElementById(blockId);
    block.style.display = 'none' ;
 }
