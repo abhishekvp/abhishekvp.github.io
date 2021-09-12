@@ -14,8 +14,11 @@ function hideallbibs()
 
 function togglebib(paperid)
 {
+    console.log(paperid);
     var paper = document.getElementById(paperid) ;
+        console.log(paper);
     var bib = paper.getElementsByTagName('pre') ;
+            console.log(bib);
     if (bib.length > 0) {
         if (bib [0] .style.display == 'none') {
             bib [0] .style.display = 'block' ;
